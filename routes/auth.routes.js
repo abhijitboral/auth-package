@@ -1,8 +1,8 @@
-const express = require("express");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const User = require("../models/user.model");
-const { sendOtpEmail } = require("../utils/email");
+import express from "express";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import User from "../models/user.model.js";
+import sendOtpEmail from "../utils/email.js";
 
 const router = express.Router();
 
@@ -48,4 +48,4 @@ router.post("/reset-password", async (req, res) => {
   res.json({ message: "Password reset successful" });
 });
 
-module.exports = router;
+export default router;

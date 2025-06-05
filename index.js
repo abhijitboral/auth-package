@@ -1,7 +1,8 @@
-require("dotenv").config();
-const express = require("express");
-const authRoutes = require("./routes/auth.routes");
-const { sequelize } = require("./models");
+import dotenv from "dotenv";
+import express from "express";
+import authRoutes from "./routes/auth.routes.js"
+import sequelize from "./models/index.js";
+dotenv.config();
 
 const app = express();
 app.use(express.json());
